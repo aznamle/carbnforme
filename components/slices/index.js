@@ -1,0 +1,5 @@
+export { default as TextSection } from './TextSection'
+export { default as FullWidthImage } from './FullWidthImage'
+export { default as TwoBlockImageLeft } from './TwoBlockImageLeft'
+export { default as TwoBlockImageRight } from './TwoBlockImageRight'
+export { default as SliceZone } from './SliceZone'
