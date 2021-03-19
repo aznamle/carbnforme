@@ -14,7 +14,7 @@ const TwoBlockImageRight = ({ slice }) => (
                 ))}
             </div>
         </div>
-        <video src={slice.primary.image.url} controls preload loop alt="video" 
+        <video src={slice.primary.url[0].text} controls preload loop alt="video" 
         className="object-cover object-center h-full w-full md:h-auto lg:w-1/2" 
         />
     </div>
