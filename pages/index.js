@@ -6,10 +6,6 @@ export default function Home({doc}) {
   // console.log(doc);
   return (
     <div>
-      <Head>
-        <title>CarbnForme</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <SliceZone sliceZone={doc.data.body} />
     </div>
   )
