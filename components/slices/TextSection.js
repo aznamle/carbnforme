@@ -6,10 +6,8 @@ const TextSection = ({ slice }) => {
 
   return (
     <section>
-    <h1>
-      <RichText
-        render={slice.primary.text}
-      />
+      <h1>
+        render={RichText.render(slice.primary.text)}
       </h1>
     </section>
   )
