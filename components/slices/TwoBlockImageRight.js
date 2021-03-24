@@ -5,7 +5,7 @@ const TwoBlockImageRight = ({ slice }) => (
     <div className="flex flex-wrap">
         <div className="bg-white flex justify-center items-center lg:w-1/2 shadow-lg">
             <div className="p-20 text-left">
-                <h3 className="text-lg lg:text-3xl font-semibold text-black">
+                <h3 className="text-5xl lg:text-6xl font-semibold text-black">
                     {slice.primary.blocktitle[0].text}
                 </h3>
                 {slice.primary.blockdescription.map((text) => (
