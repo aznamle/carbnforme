@@ -3,7 +3,7 @@ import { Client } from '../prismic-configuration'
 import { SliceZone } from '../components'
 
 export default function Home({doc}) {
-  // console.log(doc);
+  console.log(doc);
   return (
     <div>
       <SliceZone sliceZone={doc.data.body} />
