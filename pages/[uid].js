@@ -5,7 +5,6 @@ import { queryRepeatableDocuments } from '../utils/queries'
 
 
 export default function Page({ doc }) {
-    console.log(doc)
     if (doc && doc.data) {
       return (
           <div>
