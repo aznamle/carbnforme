@@ -4,7 +4,7 @@ import { SliceZone } from '../components'
 import { queryRepeatableDocuments } from '../utils/queries'
 
 
-export default function Page({ doc }) {
+const Page = ({ doc }) => {
     if (doc && doc.data) {
       return (
           <div>
@@ -13,6 +13,7 @@ export default function Page({ doc }) {
           
       )
     }
+    return null;
 }
 
 export async function getStaticProps({ params, preview = null, previewData = {} }) {
@@ -37,3 +38,4 @@ export async function getStaticProps({ params, preview = null, previewData = {} 
     }
   }
   
+export default Page
