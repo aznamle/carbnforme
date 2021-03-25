@@ -1,7 +1,12 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
 
-const TwoBlockImageRight = ({ slice }) => (
+
+function TwoBlockImageRight ({ slice }) {
+
+    const isUrlEmpty = slice.primary.url.text === "";
+
+    return (
     <div className="flex flex-wrap">
         <div className="bg-white flex justify-center items-center lg:w-1/2 shadow-lg">
             <div className="p-20 text-left">
@@ -15,10 +20,14 @@ const TwoBlockImageRight = ({ slice }) => (
                 ))}
             </div>
         </div>
+        { isUrlEmpty ? <img src={slice.primary.image.url} alt="background" className="object-cover object-center h-full w-full md:h-auto lg:w-1/2" />
+        :
         <video src={slice.primary.url[0].text} type='video/mp4' autoPlay muted loop playsInline alt="video" 
             className="object-cover object-center h-full w-full md:h-auto lg:w-1/2" 
         />
+        }
     </div>
-)
+    )
+}
 
 export default TwoBlockImageRight
