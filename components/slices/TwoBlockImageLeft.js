@@ -6,7 +6,7 @@ function TwoBlockImageLeft ({ slice }) {
     const isUrlEmpty = slice.primary.videourl
     
     return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap w-full">
 
     { RichText.asText(isUrlEmpty) == "" ? <img src={slice.primary.image.url} alt="background" className="object-cover object-center h-full w-full md:h-auto lg:w-1/2" />
         :
