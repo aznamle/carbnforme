@@ -3,11 +3,15 @@ import { Client } from '../prismic-configuration'
 import { SliceZone } from '../components'
 import { queryRepeatableDocuments } from '../utils/queries'
 
+import HeroBanner from '../components/HeroBanner'
+
 
 const Page = ({ doc }) => {
+  // console.log(doc)
     if (doc && doc.data) {
       return (
           <div>
+            <HeroBanner banner={doc.data.image}/>
             <SliceZone sliceZone={doc.data.body} />
           </div>
           

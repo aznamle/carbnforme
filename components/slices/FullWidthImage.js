@@ -1,12 +1,13 @@
 import React from 'react'
 
 const FullWidthImage = ({ slice }) => (
-  <section className="full-width-image content-section">
-    <img
-      src={slice.primary.image.url}
-      alt={slice.primary.image.alt}
-    />
-  </section>
+  <section className="flex content-center justify-center">    
+  <div className="w-full h-screen bg-top bg-fixed bg-no-repeat bg-cover"
+      style={{
+        backgroundImage: `url(${slice.primary.banner.url})`
+      }}>
+  </div>
+</section>
 )
 
 export default FullWidthImage
