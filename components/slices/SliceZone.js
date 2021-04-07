@@ -5,6 +5,8 @@ import {
   TwoBlockImageLeft,
   TwoBlockImageRight
 } from './'
+import Feature from './Feature'
+import VideoBanner from './VideoBanner'
 
 const SliceZone = ({ sliceZone }) => (
   <div>
@@ -18,6 +20,10 @@ const SliceZone = ({ sliceZone }) => (
           return <TwoBlockImageLeft slice={slice} key={`slice-${index}`} />
         case('two_block_image_right'):
           return <TwoBlockImageRight slice={slice} key={`slice-${index}`} />
+        case("feature"):
+          return <Feature slice={slice} key={`slice-${index}`} />
+        case("video_banner"):
+          return <VideoBanner slice={slice} key={`slice-${index}`} />
         default:
           return null
       }
