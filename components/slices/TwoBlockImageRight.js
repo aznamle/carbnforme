@@ -7,10 +7,10 @@ function TwoBlockImageRight ({ slice }) {
     const isUrlEmpty = slice.primary.url
 
     return (
-    <div className="flex flex-wrap w-full">
+    <div className="flex flex-wrap w-100">
         <div className="bg-white flex justify-center items-center lg:w-1/2 shadow-lg">
             <div className="p-20 text-left">
-                <h3 className="text-5xl lg:text-6xl font-semibold text-black">
+                <h3 className="text-3xl lg:text-6xl font-semibold text-black">
                     {RichText.asText(slice.primary.blocktitle)}
                 </h3>
                 {slice.primary.blockdescription.map((text) => (
