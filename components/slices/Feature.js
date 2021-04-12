@@ -1,4 +1,3 @@
-import { RichText } from 'prismic-reactjs'
 import React from 'react'
 
 const Feature = ({slice}) => {
