@@ -23,5 +23,6 @@ export async function getStaticProps({ preview = null, previewData = {} }) {
     props: {
       doc,
     },
+    revalidate: 1
   }
 }
