@@ -7,7 +7,7 @@ import HeroBanner from '../components/HeroBanner'
 
 
 const Page = ({ doc }) => {
-  console.log(doc)
+  //console.log(doc)
     if (doc && doc.data) {
       return (
           <div>
@@ -31,7 +31,7 @@ export async function getStaticProps({ params, preview = null, previewData = {} 
         preview,
         doc,
       },
-      revalidate: 1
+      // revalidate: 1
     }
   }
 
