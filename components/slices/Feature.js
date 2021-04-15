@@ -3,7 +3,7 @@ import { RichText } from 'prismic-reactjs'
 
 const Feature = ({slice}) => {
     return (
-        <div className='flex flex-wrap lg:py-24 md:px-16 lg:px-32 h-full justify-center content-center items-center bg-black'>
+        <div className='flex flex-wrap py-12 lg:py-24 md:px-16 lg:px-32 h-full justify-center content-center items-center bg-black'>
             <div className="lg:w-2/6 text-center">
                 <h1 className="text-3xl lg:text-5xl font-semibold text-white">
                     {RichText.asText(slice.primary.featuretitle)}
