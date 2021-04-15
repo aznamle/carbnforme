@@ -10,7 +10,7 @@ const Page = ({ doc }) => {
   // console.log(doc)
     if (doc && doc.data) {
       return (
-          <div>
+          <div className="relative">
             <HeroBanner banner={doc.data.image}/>
             <SliceZone sliceZone={doc.data.body} />
           </div>
@@ -31,7 +31,7 @@ export async function getStaticProps({ params, preview = null, previewData = {} 
         preview,
         doc,
       },
-      // revalidate: 1
+      revalidate: 1
     }
   }
 
