@@ -3,10 +3,11 @@ import {
   TextSection,
   FullWidthImage,
   TwoBlockImageLeft,
-  TwoBlockImageRight
+  TwoBlockImageRight,
+  Feature,
+  VideoBanner,
+  Content
 } from './'
-import Feature from './Feature'
-import VideoBanner from './VideoBanner'
 
 const SliceZone = ({ sliceZone }) => (
   <div>
@@ -24,6 +25,8 @@ const SliceZone = ({ sliceZone }) => (
           return <Feature slice={slice} key={`slice-${index}`} />
         case("video_banner"):
           return <VideoBanner slice={slice} key={`slice-${index}`} />
+        case("content"):
+          return <Content slice={slice} key={`slice-${index}`} />
         default:
           return null
       }
