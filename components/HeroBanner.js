@@ -6,7 +6,7 @@ export default function HeroBanner({ banner }) {
 
     return (
         <div>
-        { urlEmpty !== "" ? <div className="flex w-100 h-screen items-center bg-center md:bg-fixed bg-no-repeat bg-cover"
+        { urlEmpty !== undefined ? <div className="flex w-100 h-screen items-center bg-center md:bg-fixed bg-no-repeat bg-cover"
                 style={{
                   backgroundImage: `url(${banner.url})`
                 }}>
