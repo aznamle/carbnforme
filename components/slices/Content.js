@@ -3,9 +3,9 @@ import { RichText } from 'prismic-reactjs'
 
 const Content = ({ slice }) => {
     return (
-        <div className="max-w-7xl px-6 py-16 mx-auto">
-            <div className="items-center justify-items-center w-full">
-                <h1 className="font-semibold">{RichText.asText(slice.primary.sectiontitle)}</h1>
+        <div className="max-w-max px-6 py-16 mx-auto">
+            <div className="items-center justify-center py-16 w-100">
+                <h1 className="text-6xl font-semibold">{RichText.asText(slice.primary.sectiontitle)}</h1>
             </div>
 
                 <div className="">
