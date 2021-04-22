@@ -6,7 +6,8 @@ import {
   TwoBlockImageRight,
   Feature,
   VideoBanner,
-  Content
+  Content,
+  Highlight
 } from './'
 
 const SliceZone = ({ sliceZone }) => (
@@ -21,12 +22,14 @@ const SliceZone = ({ sliceZone }) => (
           return <TwoBlockImageLeft slice={slice} key={`slice-${index}`} />
         case('two_block_image_right'):
           return <TwoBlockImageRight slice={slice} key={`slice-${index}`} />
-        case("feature"):
+        case('feature'):
           return <Feature slice={slice} key={`slice-${index}`} />
-        case("video_banner"):
+        case('video_banner'):
           return <VideoBanner slice={slice} key={`slice-${index}`} />
-        case("content"):
+        case('content'):
           return <Content slice={slice} key={`slice-${index}`} />
+        case('highlight_block'):
+          return <Highlight slice={slice} key={`slice-${index}`} />
         default:
           return null
       }

@@ -4,28 +4,28 @@ import { RichText } from 'prismic-reactjs'
 const Content = ({ slice }) => {
     return (
         <div className="max-w-screen-2xl px-6 py-16 mx-auto">
-            <div className="items-center justify-center py-12 w-100">
-                <h1 className="text-6xl font-semibold">{RichText.asText(slice.primary.sectiontitle)}</h1>
+            <div className="max-w-4xl items-center justify-center py-12 w-100">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold">{RichText.asText(slice.primary.sectiontitle)}</h1>
             </div>
 
                 <div className="">
-                    {slice.items.map((content) => (
+                    {slice.items.map((content, i) => (
                     <div className="flex flex-wrap w-100 py-4">
                         <>
                             {content.leftalign === false ? 
-                                <div className="items-center justify-center md:w-1/2">
-                                    <img className="object-cover object-center w-full md:h-screen" src={content.contentimage.url} alt="right aligned"/>
+                                <div key={i} className="items-center justify-center md:w-1/2">
+                                    <img className="object-cover object-center w-full md:h-auto" src={content.contentimage.url} alt="right aligned"/>
                                 </div>
                                 : undefined
                             }
                         </>
                         
-                        <div className="flex justify-center items-center md:w-1/2">
-                            <div className="p-10 md:p-20 text-left">
-                                <h1 className="text-3xl lg:text-6xl font-semibold ">
+                        <div key={i} className="flex justify-center items-center md:w-1/2">
+                            <div className="px-8 md:px-20 py-10 md:py-20 text-left">
+                                <h1 className="text-3xl lg:text-6xl font-bold">
                                     {RichText.asText(content.contenttitle)}
                                 </h1>
-                                <p className="mt-4 whitespace-pre-line text-lg md:text-base lg:text-xl leading-relaxed text-gray-600">
+                                <p className="mt-4 whitespace-pre-line text-lg md:text-base lg:text-xl font-light leading-relaxed text-gray-600">
                                     {RichText.asText(content.contentdescription)}
                                 </p>
                             </div>
@@ -33,8 +33,8 @@ const Content = ({ slice }) => {
 
                         <>
                             {content.leftalign === true ? 
-                                <div className="justify-center items-center w-full md:w-1/2">
-                                    <img className="object-cover object-center w-full md:h-screen" src={content.contentimage.url} alt="left aligned"/>
+                                <div key={i} className="justify-center items-center md:w-1/2">
+                                    <img className="object-cover object-center w-full md:h-auto" src={content.contentimage.url} alt="left aligned"/>
                                 </div>
                                 : undefined
                             }
@@ -43,8 +43,11 @@ const Content = ({ slice }) => {
 
 
 
+
+
                     ))}
             </div>
+            
         </div>
     )
 }
