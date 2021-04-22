@@ -3,18 +3,18 @@ import { RichText } from 'prismic-reactjs'
 
 const Content = ({ slice }) => {
     return (
-        <div className="max-w-max px-6 py-16 mx-auto">
-            <div className="items-center justify-center py-16 w-100">
+        <div className="max-w-screen-2xl px-6 py-16 mx-auto">
+            <div className="items-center justify-center py-12 w-100">
                 <h1 className="text-6xl font-semibold">{RichText.asText(slice.primary.sectiontitle)}</h1>
             </div>
 
                 <div className="">
                     {slice.items.map((content) => (
-                    <div className="flex flex-wrap w-100">
+                    <div className="flex flex-wrap w-100 py-4">
                         <>
                             {content.leftalign === false ? 
                                 <div className="items-center justify-center md:w-1/2">
-                                    <img className="object-cover object-center w-full md:h-auto" src={content.contentimage.url} alt="right aligned"/>
+                                    <img className="object-cover object-center w-full md:h-screen" src={content.contentimage.url} alt="right aligned"/>
                                 </div>
                                 : undefined
                             }
@@ -22,7 +22,6 @@ const Content = ({ slice }) => {
                         
                         <div className="flex justify-center items-center md:w-1/2">
                             <div className="p-10 md:p-20 text-left">
-
                                 <h1 className="text-3xl lg:text-6xl font-semibold ">
                                     {RichText.asText(content.contenttitle)}
                                 </h1>
@@ -35,7 +34,7 @@ const Content = ({ slice }) => {
                         <>
                             {content.leftalign === true ? 
                                 <div className="justify-center items-center w-full md:w-1/2">
-                                    <img className="object-cover object-center h-full w-full" src={content.contentimage.url} alt="left aligned"/>
+                                    <img className="object-cover object-center w-full md:h-screen" src={content.contentimage.url} alt="left aligned"/>
                                 </div>
                                 : undefined
                             }
