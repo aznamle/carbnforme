@@ -7,10 +7,10 @@ import HeroBanner from '../components/HeroBanner'
 
 
 const Page = ({ doc }) => {
-  console.log(doc)
+  // console.log(doc)
     if (doc && doc.data) {
       return (
-          <div className="relative">
+          <div className="">
             <HeroBanner banner={doc.data.image}/>
             <SliceZone sliceZone={doc.data.body} />
           </div>
