@@ -4,8 +4,8 @@ import { RichText } from 'prismic-reactjs'
 const Content = ({ slice }) => {
     return (
         <div className="max-w-screen-2xl px-6 py-16 mx-auto">
-            <div className="max-w-4xl items-center justify-center py-12 w-100">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold">{RichText.asText(slice.primary.sectiontitle)}</h1>
+            <div className="max-w-md md:max-w-5xl items-center justify-center py-8 md:py-16 w-100 leading-none tracking-wider border-b border-black">
+                <h1 className="uppercase text-5xl md:text-7xl lg:text-8xl font-bold">{RichText.asText(slice.primary.sectiontitle)}</h1>
             </div>
 
                 <div className="">
@@ -14,7 +14,7 @@ const Content = ({ slice }) => {
                         <>
                             {content.leftalign === false ? 
                                 <div key={i} className="items-center justify-center md:w-1/2">
-                                    <img className="object-cover object-center w-full md:h-auto" src={content.contentimage.url} alt="right aligned"/>
+                                    <img className="object-cover object-center w-full md:h-auto" src={content.contentimage.url} alt="image"/>
                                 </div>
                                 : undefined
                             }
@@ -34,7 +34,7 @@ const Content = ({ slice }) => {
                         <>
                             {content.leftalign === true ? 
                                 <div key={i} className="justify-center items-center md:w-1/2">
-                                    <img className="object-cover object-center w-full md:h-auto" src={content.contentimage.url} alt="left aligned"/>
+                                    <img className="object-cover object-center w-full md:h-auto" src={content.contentimage.url} alt="image"/>
                                 </div>
                                 : undefined
                             }
