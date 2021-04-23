@@ -9,7 +9,7 @@ const Content = ({ slice }) => {
             </div>
 
                 <div className="">
-                    {slice.items.map((content, i) => (
+                    {slice.items.map((content, i) => {
                     <div className="flex flex-wrap w-100 py-4">
                         <>
                             {content.leftalign === false ? 
@@ -31,16 +31,17 @@ const Content = ({ slice }) => {
                             </div>
                         </div>
 
+                        {/* todo - correct mobile layout */}
                         <>
                             {content.leftalign === true ? 
                                 <div key={i} className="justify-center items-center md:w-1/2">
                                     <img className="hidden md:block object-cover object-center w-full md:h-auto" src={content.contentimage.url} alt="image"/>
                                 </div>
                                 : undefined
-                            }                        
+                            }
                         </>
                     </div>
-                    ))}
+                    })}
             </div>
             
         </div>
