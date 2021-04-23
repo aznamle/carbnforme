@@ -30,7 +30,10 @@ function TwoBlockImageRight ({ slice }) {
             </div>
         </div>
 
-        {/* Mobile Display */}
+        {/* 
+            Mobile Display
+            Only need one hidden block because of the pattern for ImageLeft slice.
+        */}
         { RichText.asText(isUrlEmpty) == "" ? <img src={slice.primary.image.url} alt="background" className="hidden md:block object-cover object-center h-full w-full md:h-auto lg:w-1/2" />
             :
             <video src={RichText.asText(slice.primary.url)} type='video/mp4' autoPlay muted loop playsInline alt="video" 

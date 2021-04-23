@@ -7,7 +7,7 @@ import {
   Feature,
   VideoBanner,
   Content,
-  Highlight
+  Highlight,
 } from './'
 
 const SliceZone = ({ sliceZone }) => (

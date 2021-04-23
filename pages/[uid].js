@@ -10,11 +10,9 @@ const Page = ({ doc }) => {
   
   // console.log(doc)
   
-  if(!doc) return <div>Loading</div>
-
     if (doc && doc.data) {
       return (
-          <div className="">
+          <div>
             <HeroBanner banner={doc.data.image}/>
             <SliceZone sliceZone={doc.data.body} />
           </div>

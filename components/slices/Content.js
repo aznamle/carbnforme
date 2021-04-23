@@ -4,23 +4,24 @@ import { RichText } from 'prismic-reactjs'
 const Content = ({ slice }) => {
     return (
         <div className="max-w-screen-2xl px-6 py-16 mx-auto">
+            
             <div className="max-w-md md:max-w-4xl items-center justify-center py-4 md:py-8 w-100 leading-none tracking-wider border-b border-black">
                 <h1 className="uppercase text-3xl md:text-4xl lg:text-6xl font-bold">{RichText.asText(slice.primary.sectiontitle)}</h1>
             </div>
 
                 <div className="">
-                    {slice.items.map((content, i) => {
-                    <div className="flex flex-wrap w-100 py-4">
+                    {slice.items.map((content) => (
+                    <div className="flex flex-wrap w-100 py-16">
                         <>
                             {content.leftalign === false ? 
-                                <div key={i} className="items-center justify-center md:w-1/2">
-                                    <img className="hidden md:block object-cover object-center w-full md:h-auto" src={content.contentimage.url} alt="image"/>
+                                <div className="items-center justify-center md:w-1/2">
+                                    <img className="object-cover object-center w-full md:h-100" src={content.contentimage.url} alt="image"/>
                                 </div>
                                 : undefined
                             }
                         </>
                         
-                        <div key={i} className="flex justify-center items-center md:w-1/2">
+                        <div className="flex justify-center items-center md:w-1/2">
                             <div className="px-8 md:px-20 py-10 md:py-20 text-left">
                                 <h1 className="text-3xl lg:text-5xl font-bold">
                                     {RichText.asText(content.contenttitle)}
@@ -31,19 +32,18 @@ const Content = ({ slice }) => {
                             </div>
                         </div>
 
-                        {/* todo - correct mobile layout */}
                         <>
                             {content.leftalign === true ? 
-                                <div key={i} className="justify-center items-center md:w-1/2">
-                                    <img className="hidden md:block object-cover object-center w-full md:h-auto" src={content.contentimage.url} alt="image"/>
+                                <div className="justify-center items-center md:w-1/2">
+                                    <img className="object-cover object-center w-full md:h-100" src={content.contentimage.url} alt="image"/>
                                 </div>
+                                
                                 : undefined
                             }
                         </>
                     </div>
-                    })}
+                    ))}
             </div>
-            
         </div>
     )
 }

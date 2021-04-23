@@ -28,14 +28,6 @@ function TwoBlockImageLeft ({ slice }) {
 
             </div>
         </div>
-
-        {/* { RichText.asText(isUrlEmpty) == "" ? <img src={slice.primary.image.url} alt="background" className="hidden md:block object-cover object-center h-full w-full md:h-auto lg:w-1/2" />
-            :
-            <video src={RichText.asText(slice.primary.videourl)} type='video/mp4' autoPlay muted loop playsInline alt="video" 
-                className="hidden md:block object-cover object-center h-full w-full md:h-auto lg:w-1/2" 
-            />
-        } */}
-
     </div>
     )
 }
