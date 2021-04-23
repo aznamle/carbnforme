@@ -8,12 +8,12 @@ function TwoBlockImageLeft ({ slice }) {
     return (
     <div className="flex flex-wrap w-100">
 
-    { RichText.asText(isUrlEmpty) == "" ? <img src={slice.primary.image.url} alt="background" className="object-cover object-center h-full w-full md:h-auto lg:w-1/2" />
-        :
+        { RichText.asText(isUrlEmpty) == "" ? <img src={slice.primary.image.url} alt="background" className="hidden md:block object-cover object-center h-full w-full md:h-auto lg:w-1/2" />
+            :
             <video src={RichText.asText(slice.primary.videourl)} type='video/mp4' autoPlay muted loop playsInline alt="video" 
-                className="object-cover object-center h-full w-full md:h-auto lg:w-1/2" 
+                className="hidden md:block object-cover object-center h-full w-full md:h-auto lg:w-1/2" 
             />
-        }    
+        }
         <div className="bg-black flex flex-col justify-center items-center lg:w-1/2 shadow-lg">
             <div className="p-10 md:p-20 text-left">
                 <h3 className="text-3xl lg:text-6xl font-semibold text-white">
@@ -27,6 +27,12 @@ function TwoBlockImageLeft ({ slice }) {
 
             </div>
         </div>
+        { RichText.asText(isUrlEmpty) == "" ? <img src={slice.primary.image.url} alt="background" className="md:hidden object-cover object-center h-full w-full md:h-auto lg:w-1/2" />
+            :
+            <video src={RichText.asText(slice.primary.videourl)} type='video/mp4' autoPlay muted loop playsInline alt="video" 
+                className="md:hidden object-cover object-center h-full w-full md:h-auto lg:w-1/2" 
+            />
+        }
     </div>
     )
 }
