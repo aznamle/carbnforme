@@ -8,6 +8,7 @@ import {
   VideoBanner,
   Content,
   Highlight,
+  FeatureList,
 } from './'
 
 const SliceZone = ({ sliceZone }) => (
@@ -30,6 +31,8 @@ const SliceZone = ({ sliceZone }) => (
           return <Content slice={slice} key={`slice-${index}`} />
         case('highlight_block'):
           return <Highlight slice={slice} key={`slice-${index}`} />
+        case('feature_list'):
+          return <FeatureList slice={slice} key={`slice-${index}`} />
         default:
           return null
       }

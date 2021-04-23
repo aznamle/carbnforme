@@ -8,6 +8,7 @@ import HeroBanner from '../components/HeroBanner'
 
 const Page = ({ doc }) => {
   
+  if(!doc) return <div>Loading</div>
   // console.log(doc)
   
     if (doc && doc.data) {

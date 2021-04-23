@@ -6,13 +6,13 @@ const Highlight = ({ slice }) => {
     const isUrlEmpty = slice.primary.highlightvideourl
 
     return (
-        <div className="bg-black py-12 md:py-24">
-            <div className="max-w-screen-2xl mx-auto px-6 sm:px-12 lg:py-6 xl:py-16 relative flex flex-col sm:flex-row bg-black">
+        <div className="bg-black py-12 md:py-24 h-full">
+            <div className="lg:max-w-screen-2xl mx-auto px-6 sm:px-12 lg:py-6 xl:py-16 relative flex flex-col sm:flex-row bg-black">
                 <div className="sm:w-1/2 sm:pt-8 lg:pt-8 pb-8 sm:pb-16 lg:pb-36 relative z-30">
                     <h1 className="uppercase font-black text-white leading-none tracking-wider mb-6 mt-4 text-3xl lg:text-6xl xl:text-8xl">
                         {RichText.asText(slice.primary.highlighttitle)}
                     </h1>
-                    <p className="text-white text-lg sm:w-2/3 lg:w-3/4">
+                    <p className="text-white text-lg font-medium sm:w-2/3 lg:w-3/4">
                         {RichText.asText(slice.primary.highlightdescription)}    
                     </p>
                 </div>
