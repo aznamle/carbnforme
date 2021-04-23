@@ -8,6 +8,8 @@ function TwoBlockImageRight ({ slice }) {
 
     return (
     <div className="flex flex-wrap w-100">
+        
+        {/* Desktop Display */}        
         { RichText.asText(isUrlEmpty) == "" ? <img src={slice.primary.image.url} alt="background" className="hidden md:block object-cover object-center h-full w-full md:h-auto lg:w-1/2" />
         :
         <video src={RichText.asText(slice.primary.url)} type='video/mp4' autoPlay muted loop playsInline alt="video" 
@@ -26,6 +28,8 @@ function TwoBlockImageRight ({ slice }) {
                 ))}
             </div>
         </div>
+
+        {/* Mobile Display */}
         { RichText.asText(isUrlEmpty) == "" ? <img src={slice.primary.image.url} alt="background" className="md:hidden object-cover object-center h-full w-full md:h-auto lg:w-1/2" />
         :
         <video src={RichText.asText(slice.primary.url)} type='video/mp4' autoPlay muted loop playsInline alt="video" 
