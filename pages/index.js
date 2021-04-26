@@ -3,6 +3,7 @@ import { Client } from '../prismic-configuration'
 import { SliceZone } from '../components'
 import HeroBanner from '../components/HeroBanner'
 
+
 export default function Home({doc}) {
   // console.log(doc);
   return (
