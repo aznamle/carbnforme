@@ -9,6 +9,7 @@ import {
   Content,
   Highlight,
   FeatureList,
+  Specs
 } from './'
 
 const SliceZone = ({ sliceZone }) => (
@@ -33,6 +34,8 @@ const SliceZone = ({ sliceZone }) => (
           return <Highlight slice={slice} key={`slice-${index}`} />
         case('feature_list'):
           return <FeatureList slice={slice} key={`slice-${index}`} />
+        case('specifications'):
+          return <Specs slice={slice} key={`slice-${index}`} />
         default:
           return null
       }

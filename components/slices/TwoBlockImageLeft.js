@@ -1,5 +1,5 @@
-import { RichText } from 'prismic-reactjs';
 import React from 'react'
+import { RichText } from 'prismic-reactjs';
 
 function TwoBlockImageLeft ({ slice }) {
     
@@ -20,8 +20,8 @@ function TwoBlockImageLeft ({ slice }) {
                 <h3 className="text-3xl lg:text-6xl font-semibold text-white">
                     {RichText.asText(slice.primary.blocktitle)}
                 </h3>
-                {slice.primary.blockdescription.map((text) => (
-                    <p className="mt-4 whitespace-pre-line text-lg md:text-base lg:text-xl leading-relaxed text-white">
+                {slice.primary.blockdescription.map((text, i) => (
+                    <p key={i} className="mt-4 whitespace-pre-line text-lg md:text-base lg:text-xl leading-relaxed text-white">
                         {text.text}       
                     </p>
                 ))}
