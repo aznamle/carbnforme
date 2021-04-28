@@ -1,9 +1,11 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
+import Section from '../Section'
 
 
 const Specs = ({ slice }) => {
     return (
+        <Section>
         <div className="z-30 relative items-center justify-center w-full h-full">
 
 
@@ -28,6 +30,7 @@ const Specs = ({ slice }) => {
             </div>
 
         </div>
+        </Section>
     )
 }
 

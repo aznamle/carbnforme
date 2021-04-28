@@ -1,16 +1,21 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
 
+import Section from '../Section'
+
 const Content = ({ slice }) => {
     return (
         <div className="max-w-screen-2xl px-6 md:px-0 py-16 mx-auto">
-            
+            <Section>
             <div className="max-w-md lg:max-w-4xl items-center justify-center md:px-12 py-4 md:py-8 w-100 leading-none tracking-wider">
                 <h1 className="uppercase text-3xl md:text-4xl lg:text-6xl font-bold">{RichText.asText(slice.primary.sectiontitle)}</h1>
             </div>
+            </Section>
 
                 <div className="">
                     {slice.items.map((content, i) => (
+                                <Section>
+
                     <div key={i} className="flex flex-wrap w-100 py-4 md:py-12">
                         <>
                             {content.leftalign === false ? 
@@ -42,10 +47,10 @@ const Content = ({ slice }) => {
                         </>
 
                     </div>
+                    </Section>
                     ))}
             </div>
-        </div>
-    )
+        </div>    )
 }
 
 export default Content
