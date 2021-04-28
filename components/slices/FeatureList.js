@@ -6,12 +6,13 @@ import Section from '../Section'
 const FeatureList = ({ slice }) => {
 
     return (
-        <Section>
         <div className="max-w-screen-2xl px-6 md:px-0 py-32 mx-auto">
-
+            <Section>
             <div className="max-w-md lg:max-w-4xl items-center justify-center md:px-12 lg:px-0 py-4 md:pb-12 w-100 leading-none tracking-wider">
                 <h1 className="uppercase text-3xl md:text-4xl lg:text-5xl font-bold">{RichText.asText(slice.primary.featurelisttitle)}</h1>
             </div>
+            </Section>
+            <Section>
 
             <div className="lg:flex">
                 <div className="items-center justify-center lg:w-4/6">
@@ -32,8 +33,8 @@ const FeatureList = ({ slice }) => {
                     ))}
                 </div>
             </div>
-        </div>
         </Section>
+        </div>
     )
 }
 
