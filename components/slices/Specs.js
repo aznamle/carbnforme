@@ -13,10 +13,11 @@ const Specs = ({ slice }) => {
                 height: "85vh"
                 }}>
             </div>
-            <div className='absolute inset-0 z-20 flex flex-col container mx-auto justify-center items-center mt-64 w-full text-white'>
+            <div className='absolute inset-0 z-20 flex flex-col justify-center items-center w-full mt-52 text-white'>
                 {slice.items.map((spec,i) => (
                 <div className='p-4 w-40'>
-                    <h1 className='border-t pt-1 text-xl font-bold border-white'>
+                    <div className="w-8 border-t"></div>
+                    <h1 className='pt-1 text-xl font-bold border-white'>
                         {RichText.asText(spec.spectitle)}
                     </h1>
                     <p>
