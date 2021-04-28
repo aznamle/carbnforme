@@ -34,7 +34,7 @@ const Section = ( {children }) => {
         transition={{
           delay: 0.4,
           duration: 0.5,
-          damping: 5,
+          damping: 10,
           mass: 1,
         }}
       > 
