@@ -31,7 +31,7 @@ export async function getStaticProps({ params, preview = null, previewData = {} 
   }
 
   export async function getStaticPaths() {
-    const documents = await queryRepeatableDocuments((doc) => doc.type === 'page')
+    const documents = await queryRepeatableDocuments((doc) => doc.type === 'article')
     return {
       paths: documents.map(doc => `/article/${doc.uid}`),
       fallback: true,
