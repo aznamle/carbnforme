@@ -14,39 +14,38 @@ const Content = ({ slice }) => {
 
                 <div className="">
                     {slice.items.map((content, i) => (
-                                <Section>
-
-                    <div key={i} className="flex flex-wrap w-100 py-4 md:py-12">
-                        <>
-                            {content.leftalign === false ? 
-                                <div className="items-center justify-center md:w-3/5">
-                                    <img className="object-cover object-center w-full md:h-full lg:h-100" src={content.contentimage.url} alt="image"/>
+                    <Section key={i}>
+                        <div className="flex flex-wrap w-100 py-4 md:py-12">
+                            <>
+                                {content.leftalign === false ? 
+                                    <div className="items-center justify-center md:w-3/5">
+                                        <img className="object-cover object-center w-full md:h-full lg:h-100" src={content.contentimage.url} alt="image"/>
+                                    </div>
+                                    : null
+                                }
+                            </>
+                            
+                            <div className="flex justify-center items-center md:w-2/5">
+                                <div className="md:px-12 py-6 md:py-16 text-left">
+                                    <h1  className="uppercase text-3xl lg:text-3xl font-bold">
+                                        {RichText.asText(content.contenttitle)}
+                                    </h1>
+                                    <p className="mt-4 whitespace-pre-line text-lg md:text-base lg:text-xl font-medium leading-relaxed text-black">
+                                        {RichText.asText(content.contentdescription)}
+                                    </p>
                                 </div>
-                                : null
-                            }
-                        </>
-                        
-                        <div className="flex justify-center items-center md:w-2/5">
-                            <div className="md:px-12 py-6 md:py-16 text-left">
-                                <h1  className="uppercase text-3xl lg:text-3xl font-bold">
-                                    {RichText.asText(content.contenttitle)}
-                                </h1>
-                                <p className="mt-4 whitespace-pre-line text-lg md:text-base lg:text-xl font-medium leading-relaxed text-black">
-                                    {RichText.asText(content.contentdescription)}
-                                </p>
                             </div>
+
+                            <>
+                                {content.leftalign === true ? 
+                                    <div className="justify-center items-center md:w-3/5">
+                                        <img className="object-cover object-center w-full md:h-full lg:h-100" src={content.contentimage.url} alt="image"/>
+                                    </div>
+                                    : null
+                                }
+                            </>
+
                         </div>
-
-                        <>
-                            {content.leftalign === true ? 
-                                <div className="justify-center items-center md:w-3/5">
-                                    <img className="object-cover object-center w-full md:h-full lg:h-100" src={content.contentimage.url} alt="image"/>
-                                </div>
-                                : null
-                            }
-                        </>
-
-                    </div>
                     </Section>
                     ))}
             </div>

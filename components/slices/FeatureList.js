@@ -24,12 +24,14 @@ const FeatureList = ({ slice }) => {
                     <div className="lg:w-2/4 justify-center items-center">
                         {slice.items.map((content, i) => (
                             <div key={i} className="md:px-12 py-6 md:py-8 text-left">
-                                <h1 className="uppercase text-3xl lg:text-3xl font-bold">
-                                    {RichText.asText(content.featuretitle)}
-                                </h1>
-                                <p className="mt-1 whitespace-pre-line text-lg md:text-base lg:text-xl font-normal leading-relaxed text-black">
-                                    {RichText.asText(content.featuredescription)}
-                                </p>
+                                <Section>
+                                    <h1 className="uppercase text-3xl lg:text-3xl font-bold">
+                                        {RichText.asText(content.featuretitle)}
+                                    </h1>
+                                    <p className="mt-1 whitespace-pre-line text-lg md:text-base lg:text-xl font-normal leading-relaxed text-black">
+                                        {RichText.asText(content.featuredescription)}
+                                    </p>
+                                </Section>
                             </div>
                         ))}
                     </div>
