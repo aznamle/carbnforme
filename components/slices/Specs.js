@@ -13,11 +13,13 @@ const Specs = ({ slice }) => {
 
 
                 <div className='lg:w-1/4 justify-center items-center'>
-                <div className=''>
-                    <Section>
-                    <h1 className='font-bold text-3xl text-white'>{RichText.asText(slice.primary.header_spec_title)}</h1>
-                    </Section>
-                </div>
+                    <div className=''>
+                        <Section>
+                            <h1 className='font-bold text-3xl text-white'>
+                                {RichText.asText(slice.primary.header_spec_title)}
+                            </h1>
+                        </Section>
+                    </div>
                     {slice.items.map((spec,i) => (
                     <Section key={i}>
                         <div className='py-4'>
