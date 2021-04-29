@@ -17,8 +17,8 @@ const Highlight = ({ slice }) => {
                         <p className="text-white text-lg font-medium sm:w-2/3 lg:w-3/4">
                             {RichText.asText(slice.primary.highlightdescription)}    
                         </p>
-                        <div className='pt-8'>
-                            <a href={slice.primary.buynow.url} target="_blank" className="border-2 border-white rounded-2xl font-normal text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
+                        <div className='pt-10'>
+                            <a href={slice.primary.buynow.url} target="_blank" className="border-2 border-white font-normal text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
                                 Buy Now
                             </a>
                         </div>
