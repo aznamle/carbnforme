@@ -21,7 +21,7 @@ const Specs = ({ slice }) => {
 
 
                 <div className='lg:w-1/4 justify-center items-center'>
-                    <div className=''>
+                    <div>
                         <Section>
                             <h1 className='font-bold text-center lg:text-justify text-3xl text-white'>
                                 {RichText.asText(slice.primary.header_spec_title)}
