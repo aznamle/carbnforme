@@ -19,12 +19,14 @@ const FullWidthImage = ({ slice }) => {
           </div>
       </div>
       <div className='lg:flex h-full max-w-screen-xl mx-auto py-12 lg:py-24'>
+        {slice.items.map((content, i) => (
+        <>
         <div className='lg:w-1/3 text-center lg:text-justify p-6 lg:py-0'>
-          <h1 className='text-4xl text-black'>
-            HELLO TEST
+          <h1 className='flex text-4xl text-black'>
+            {RichText.asText(content.side_title)}
           </h1>
           <div className='pt-6'>
-            <a href='https://www.modinjapan.com' target='_blank'>
+            <a href={content.side_link.url} target='_blank'>
             <button className='bg-white hover:bg-black text-grey-dark font-semibold hover:text-white py-3 px-6 border border-black rounded-full transition duration-300 ease-in-out mr-2'>
               Buy Now
             </button>
@@ -33,8 +35,12 @@ const FullWidthImage = ({ slice }) => {
         </div>
         
         <div className='lg:2/3 text-center lg:text-justify p-6 lg:p-0'>
-          <p className='text-xl font-light'>{RichText.asText(slice.primary.bannerdescription)}</p>
+          <p className='text-xl font-light'>
+            {RichText.asText(content.side_description)}
+          </p>
         </div>
+      </>
+      ))}
       </div>
     </div>
   )
