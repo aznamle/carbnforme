@@ -15,11 +15,6 @@ const FullWidthImage = ({ slice }) => {
             <div className='text-left px-4'>
               <h1 className='text-3xl md:text-4xl text-white tracking-wider py-2'>{RichText.asText(slice.primary.bannertitle)}</h1>
               <p className='text-md lg:text-lg text-white'>{RichText.asText(slice.primary.bannerdescription)}</p>
-              {/* <div className='pt-6'>
-                <a href='' target="_blank" className="border-2 border-white font-normal text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
-                  Buy Now
-                </a>
-              </div> */}
             </div>
           </div>
       </div>
