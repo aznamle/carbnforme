@@ -19,12 +19,12 @@ const FullWidthImage = ({ slice }) => {
           </div>
       </div>
       <div className='lg:flex h-full max-w-screen-xl mx-auto py-12 lg:py-24'>
-        <div className='lg:w-1/3 text-center lg:text-justify p-6 lg:p-0'>
+        <div className='lg:w-1/3 text-center lg:text-justify p-6 lg:py-0'>
           <h1 className='text-4xl text-black'>
             HELLO TEST
           </h1>
           <div className='pt-6'>
-            <a href='' target="_blank" className="border-2 border-black rounded-full font-normal text-black px-6 py-3 transition duration-300 ease-in-out hover:bg-black hover:text-white mr-6">
+            <a href='https://www.modinjapan.com' target="_blank" className="border-2 border-black rounded-full font-normal text-black px-6 py-3 transition duration-300 ease-in-out hover:bg-black hover:text-white mr-6">
               Buy Now
             </a>
           </div>
