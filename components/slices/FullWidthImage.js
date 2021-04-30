@@ -21,15 +21,13 @@ const FullWidthImage = ({ slice }) => {
       <div className='lg:flex h-full max-w-screen-xl mx-auto py-12 lg:py-24'>
         {slice.items.map((content, i) => (
         <>
-        <div className='lg:w-1/3 text-center lg:text-justify p-6 lg:py-0'>
-          <h1 className='flex text-4xl text-black'>
+        <div className='lg:w-1/3 text-center lg:text-left p-6 lg:py-0'>
+          <h1 className='text-4xl text-black'>
             {RichText.asText(content.side_title)}
           </h1>
           <div className='pt-6'>
-            <a href={content.side_link.url} target='_blank'>
-            <button className='bg-white hover:bg-black text-grey-dark font-semibold hover:text-white py-3 px-6 border border-black rounded-full transition duration-300 ease-in-out mr-2'>
+            <a href={content.side_link.url} target="_blank" className="border-2 border-black rounded-full font-normal text-black px-6 py-3 transition duration-300 ease-in-out hover:bg-black hover:text-white mr-6">
               Buy Now
-            </button>
             </a>
           </div>
         </div>
