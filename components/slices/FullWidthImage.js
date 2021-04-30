@@ -18,8 +18,8 @@ const FullWidthImage = ({ slice }) => {
             </div>
           </div>
       </div>
-      <div className='flex h-full max-w-screen-xl mx-auto py-12 lg:py-24'>
-        <div className='md:w-1/3'>
+      <div className='lg:flex h-full max-w-screen-xl mx-auto py-12 lg:py-24'>
+        <div className='lg:w-1/3 text-center lg:text-justify p-6 lg:p-0'>
           <h1 className='text-4xl text-black'>
             HELLO TEST
           </h1>
@@ -30,7 +30,7 @@ const FullWidthImage = ({ slice }) => {
           </div>
         </div>
         
-        <div className='md:2/3'>
+        <div className='lg:2/3 text-center lg:text-justify p-6 lg:p-0'>
           <p className='text-xl font-light'>{RichText.asText(slice.primary.bannerdescription)}</p>
         </div>
       </div>
