@@ -8,7 +8,7 @@ const FullWidthImage = ({ slice }) => {
       <div className="flex w-100 bg-center bg-no-repeat bg-cover"
           style={{
             backgroundImage: `url(${slice.primary.banner.url})`,
-            height: '75vh',
+            height: '100vh',
           }}>
         <div className='w-1/4'/>
           <div className='flex max-w-3xl mx-auto items-center justify-center h-full w-3/4'>
