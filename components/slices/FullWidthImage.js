@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ Fragment } from 'react'
 import { RichText } from 'prismic-reactjs'
 import Section from '../Section'
 
@@ -18,26 +18,26 @@ const FullWidthImage = ({ slice }) => {
             </div>
           </div>
       </div>
-      <div className='lg:flex h-full max-w-5xl mx-auto py-12 lg:py-24'>
+      <div className='items-center justify-center mx-auto max-w-5xl py-12 lg:py-24'>
         {slice.items.map((content, i) => (
-        <>
-        <div className='w-full lg:w-1/3 text-center lg:text-left p-6 lg:py-0'>
-          <h1 className='text-4xl text-black'>
-            {RichText.asText(content.side_title)}
-          </h1>
-          <div className='pt-6'>
-            <a href={content.side_link.url} target="_blank" className="border-2 border-black rounded-full font-normal text-black px-6 py-3 transition duration-300 ease-in-out hover:bg-black hover:text-white mr-6">
-              Buy Now
-            </a>
+        <div key={i} className='lg:flex w-full'>
+          <div className='text-center lg:text-left w-full lg:w-1/3 p-6 lg:py-0'>
+            <h1 className='text-4xl text-black'>
+              {RichText.asText(content.side_title)}
+            </h1>
+            <div className='pt-6'>
+              <a href={content.side_link.url} target="_blank" className="border-2 border-black rounded-full font-normal text-black px-6 py-3 transition duration-300 ease-in-out hover:bg-black hover:text-white mr-6">
+                Buy Now
+              </a>
+            </div>
+          </div>
+          
+          <div className='text-center lg:text-left w-full lg:w-2/3 p-6 lg:py-0'>
+            <p className='text-xl font-light'>
+              {RichText.asText(content.side_description)}
+            </p>
           </div>
         </div>
-        
-        <div className='w-full lg:w-2/3 text-center lg:text-left p-6 lg:py-0'>
-          <p className='text-xl font-light'>
-            {RichText.asText(content.side_description)}
-          </p>
-        </div>
-      </>
       ))}
       </div>
     </div>
