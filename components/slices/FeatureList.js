@@ -6,7 +6,7 @@ import Section from '../Section'
 const FeatureList = ({ slice }) => {
 
     return (
-        <div className="max-w-screen-2xl px-6 md:px-0 py-12 md:py-32 mx-auto">
+        <div className="max-w-screen-2xl px-6 md:px-0 py-12 md:py-32 mx-auto font-montserrat">
             
             <Section>
                 <div className="max-w-md lg:max-w-4xl items-center justify-center md:px-12 lg:px-0 py-4 md:pb-12 w-100 leading-none tracking-wider">

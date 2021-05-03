@@ -5,7 +5,7 @@ import Section from '../Section'
 
 const Specs = ({ slice }) => {
     return (
-        <div className="bg-black py-12 md:py-24 lg:py-36 h-full">
+        <div className="bg-black py-12 md:py-24 lg:py-36 h-full bg-cover bg-center font-montserrat">
 
             <div className='max-w-md lg:max-w-4xl mx-auto pb-4 lg:pb-16 items-center text-center justify-center'>
             <Section>
