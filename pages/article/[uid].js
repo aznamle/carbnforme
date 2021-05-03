@@ -19,7 +19,7 @@ export async function getStaticProps({ params, preview = null, previewData = {} 
   
     const { ref } = previewData
     const client = Client();
-    const doc = await client.getByUID('article', params.uid, ref ? { ref } : null) || {}
+    const data = await client.getByUID('article', params.uid, ref ? { ref } : null) || {}
   
     return {
       props: {
