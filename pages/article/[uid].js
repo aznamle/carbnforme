@@ -4,12 +4,15 @@ import { Client } from '../../prismic-configuration'
 import { SliceZone } from '../../components'
 import { queryRepeatableDocuments } from '../../utils/queries'
 
-const Article = ({ data }) => {
+const Article = ({ doc }) => {
+  if (doc && doc.data) {
     return (
         <div>
-            
+            <SliceZone sliceZone={doc.data.body} />
         </div>
     )
+  }
+  return null;
 }
 
 export default Article
@@ -19,12 +22,12 @@ export async function getStaticProps({ params, preview = null, previewData = {} 
   
     const { ref } = previewData
     const client = Client();
-    const data = await client.getByUID('article', params.uid, ref ? { ref } : null) || {}
+    const doc = await client.getByUID('article', params.uid, ref ? { ref } : null) || {}
   
     return {
       props: {
         preview,
-        data,
+        doc,
       },
       revalidate: 1,
     }
