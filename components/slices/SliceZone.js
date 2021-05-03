@@ -10,7 +10,8 @@ import {
   Highlight,
   FeatureList,
   Specs,
-  StickyBanner
+  StickyBanner,
+  Gallery
 } from './'
 
 const SliceZone = ({ sliceZone }) => (
@@ -39,6 +40,8 @@ const SliceZone = ({ sliceZone }) => (
           return <Specs slice={slice} key={`slice-${index}`} />
         case('sticky_header'):
           return <StickyBanner slice={slice} key={`slice-${index}`} />
+        case('image_gallery'):
+          return <Gallery slice={slice} key={`slice-${index}`} />
         default:
           return null
       }
