@@ -18,7 +18,7 @@ const FullWidthImage = ({ slice }) => {
             </div>
           </div>
       </div>
-      <div className='lg:flex h-full max-w-screen-xl mx-auto py-12 lg:py-24'>
+      <div className='lg:flex h-full max-w-5xl mx-auto py-12 lg:py-24'>
         {slice.items.map((content, i) => (
         <>
         <div className='lg:w-1/2 text-center lg:text-left p-6 lg:py-0'>
@@ -32,7 +32,7 @@ const FullWidthImage = ({ slice }) => {
           </div>
         </div>
         
-        <div className='lg:1/2 text-center lg:text-justify p-6 lg:p-0'>
+        <div className='lg:1/2 text-center lg:text-left p-6 lg:p-0'>
           <p className='text-xl font-light'>
             {RichText.asText(content.side_description)}
           </p>
