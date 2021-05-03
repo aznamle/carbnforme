@@ -6,7 +6,7 @@ function Navbar() {
     const closeMobileMenu = () => toggleExpansion(false);
 
     return (
-      <nav className="flex items-center justify-between lg:justify-around flex-wrap bg-white p-6 shadow-xl">
+      <nav className="flex items-center justify-between lg:justify-around flex-wrap bg-white p-6 shadow-md">
         <div className=" flex-shrink-0 text-white mr-6">
         <div className="text-black flex items-center hover:text-gray-200 transition ease-in-out duration-300">
                 <Link href="/">

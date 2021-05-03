@@ -3,11 +3,19 @@ import React from 'react'
 import { Client } from '../../prismic-configuration'
 import { SliceZone } from '../../components'
 import { queryRepeatableDocuments } from '../../utils/queries'
+import ArticleHeader from '../../components/ArticleHeader'
 
 const Article = ({ doc }) => {
+  if(!doc) return <div>Loading</div>
+  // console.log(doc)
   if (doc && doc.data) {
     return (
         <div>
+            <ArticleHeader 
+              title={doc.data.article_title} 
+              date={doc.data.article_date} 
+              image={doc.data.header_image} 
+            />
             <SliceZone sliceZone={doc.data.body} />
         </div>
     )
