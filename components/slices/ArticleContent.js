@@ -8,7 +8,7 @@ const ArticleContent = ({ slice }) => {
             {slice.items.map((content,i) => (
             <div>
                 <img src={content.image.url} />
-                <h1 className='text-4xl py-4'>{RichText.asText(content.sub_title)}</h1>
+                <h1 className='text-5xl py-6'>{RichText.asText(content.sub_title)}</h1>
                 <p className='text-lg font-light leading-relaxed'>{RichText.asText(content.sub_description)}</p>
             </div>
             ))}
