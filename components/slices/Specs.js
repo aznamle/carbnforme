@@ -10,7 +10,7 @@ const Specs = ({ slice }) => {
             <div className='max-w-md lg:max-w-4xl mx-auto pb-4 lg:pb-16 items-center text-center justify-center'>
             <Section>
                 <h1 className='uppercase text-white text-2xl md:text-4xl font-bold'>
-                    Cool title here
+                    {RichText.asText(slice.primary.spec_title)}
                 </h1>
             </Section>
             </div>
@@ -38,7 +38,7 @@ const Specs = ({ slice }) => {
                             <p className='text-white'>
                                 {RichText.asText(spec.specdescription)}
                             </p>
-                        </div>
+                            </div>
                     </Section>
                     ))}
                 </div>
