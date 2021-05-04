@@ -1,10 +1,14 @@
 import 'tailwindcss/tailwind.css'
 import '../styles/globals.css'
 
+import React from 'react'
+import { Client } from '../prismic-configuration'
+
 import Layout from '../components/Layout'
 
 
 function MyApp({ Component, pageProps, menu }) {
+  console.log(menu)
   return (
     <Layout menu={menu}>
       <Component {...pageProps} menu={menu}/>

@@ -1,13 +1,11 @@
 import React, {useState, useEffect } from 'react'
-// import Link from 'next/link'
-import { Link, RichText } from 'prismic-reactjs'
+import Link from 'next/link'
+// import { Link, RichText } from 'prismic-reactjs'
 
 
-const Navbar = ({ menu=[] })=> {
+function Navbar({}) {
     const [isExpanded, toggleExpansion] = useState(false)
     const closeMobileMenu = () => toggleExpansion(false);
-
-    console.log(menu)
 
     return (
       <nav className="flex items-center justify-between lg:justify-around flex-wrap bg-white p-6 shadow-md">
@@ -27,7 +25,7 @@ const Navbar = ({ menu=[] })=> {
           <div className="lg:flex-grow">
 
 
-          {menu.data.menu_links.map((menuLink, index) => (
+          {/* {menu.data.menu_links.map((menuLink, index) => (
             <li key={`menuLinks-${index}`} className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-200 mr-4">
               <Link href={Link.url(menuLink.link)}>
                 <a className="font-light text-md lg:text-xl md:text-l hover:text-gray-200 transition ease-in-out duration-300" onClick={closeMobileMenu}>
@@ -35,7 +33,7 @@ const Navbar = ({ menu=[] })=> {
                 </a>
               </Link>
             </li>
-          ))}
+          ))} */}
 
 
 
