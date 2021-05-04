@@ -1,9 +1,13 @@
 import React, {useState, useEffect } from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
+import { Link, RichText } from 'prismic-reactjs'
 
-function Navbar() {
+
+const Navbar = ({ menu=[] })=> {
     const [isExpanded, toggleExpansion] = useState(false)
     const closeMobileMenu = () => toggleExpansion(false);
+
+    console.log(menu)
 
     return (
       <nav className="flex items-center justify-between lg:justify-around flex-wrap bg-white p-6 shadow-md">
@@ -21,12 +25,23 @@ function Navbar() {
         </div>
         <div className={`${ isExpanded ? `block` : `hidden` } w-full lg:flex lg:items-center lg:w-auto`}>
           <div className="lg:flex-grow">
-            <li className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-200 mr-4">
-              <Link href="/products">
-                <a className="font-light text-md lg:text-xl md:text-l  hover:text-gray-200 transition ease-in-out duration-300" onClick={closeMobileMenu}>PRODUCTS</a>
+
+
+          {menu.data.menu_links.map((menuLink, index) => (
+            <li key={`menuLinks-${index}`} className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-200 mr-4">
+              <Link href={Link.url(menuLink.link)}>
+                <a className="font-light text-md lg:text-xl md:text-l hover:text-gray-200 transition ease-in-out duration-300" onClick={closeMobileMenu}>
+                  {RichText.asText(menuLink.label)}
+                </a>
               </Link>
             </li>
-            <li className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-200 mr-4">
+          ))}
+
+
+
+
+
+            {/* <li className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-200 mr-4">
               <Link href="/process" >
                 <a className="font-light text-md lg:text-xl md:text-l  hover:text-gray-200 transition ease-in-out duration-300" onClick={closeMobileMenu}>PROCESS</a>
               </Link>
@@ -35,7 +50,7 @@ function Navbar() {
               <Link href="/about">
                 <a className="font-light text-md lg:text-xl md:text-l  hover:text-gray-200 transition ease-in-out duration-300" onClick={closeMobileMenu}>ABOUT US</a>
               </Link>
-            </li>
+            </li> */}
           </div>
         </div>
       </nav>

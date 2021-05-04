@@ -3,7 +3,6 @@ import { RichText } from 'prismic-reactjs'
 import Section from '../Section'
 
 const FullWidthImage = ({ slice }) => {
-  console.log(slice)
   return (
     <div>
     {slice.primary.banner.url !== '' ?
@@ -35,8 +34,8 @@ const FullWidthImage = ({ slice }) => {
       { RichText.asText(slice.items[0].side_title) !== '' ?
       <div className='items-center justify-center mx-auto max-w-5xl py-12 lg:py-24'>
         {slice.items.map((content, i) => (
-        <Section>
-        <div key={i} className='lg:flex w-full'>
+        <Section key={i} >
+        <div className='lg:flex w-full'>
           <div className='text-center lg:text-left w-full lg:w-1/3 p-6 lg:py-0'>
             <h1 className='text-4xl text-black'>
               {RichText.asText(content.side_title)}
