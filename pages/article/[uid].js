@@ -10,7 +10,7 @@ const Article = ({ doc }) => {
   // console.log(doc)
   if (doc && doc.data) {
     return (
-        <div>
+        <div className='container mx-auto items-center justify-center max-w-5xl py-12 '>
             <ArticleHeader 
               title={doc.data.article_title} 
               date={doc.data.article_date} 

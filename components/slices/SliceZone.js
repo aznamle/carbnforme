@@ -11,7 +11,8 @@ import {
   FeatureList,
   Specs,
   StickyBanner,
-  Gallery
+  Gallery,
+  ArticleContent
 } from './'
 
 const SliceZone = ({ sliceZone }) => (
@@ -42,6 +43,8 @@ const SliceZone = ({ sliceZone }) => (
           return <StickyBanner slice={slice} key={`slice-${index}`} />
         case('image_gallery'):
           return <Gallery slice={slice} key={`slice-${index}`} />
+        case('article_content'):
+          return <ArticleContent slice={slice} key={`slice-${index}`} />
         default:
           return null
       }

@@ -10,4 +10,6 @@ export { default as Highlight } from './Highlight'
 export { default as Specs } from './Specs'
 export { default as StickyBanner } from './StickyBanner'
 export { default as Gallery } from './Gallery'
+export { default as ArticleContent } from './ArticleContent'
+
 export { default as SliceZone } from './SliceZone'
