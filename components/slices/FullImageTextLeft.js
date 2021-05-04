@@ -11,8 +11,8 @@ const FullImageTextLeft = ({ slice }) => {
             }}
         >
             <div className=''/>
-                <div className='flex max-w-6xl mx-auto items-center justify-center h-full'>
-                <div className='text-left px-4 w-3/5'>
+                <div className='flex max-w-5xl mx-auto items-center justify-center h-full'>
+                <div className='text-left w-3/5'>
                 <Section>
                     <h1 className='text-3xl md:text-4xl text-white tracking-wider py-2'>{RichText.asText(slice.primary.block_title)}</h1>
                     <p className='text-md lg:text-lg text-white'>{RichText.asText(slice.primary.block_description)}</p>
@@ -22,6 +22,8 @@ const FullImageTextLeft = ({ slice }) => {
                         </a>
                     </div>
                 </Section>
+                </div>
+                <div className='w-2/5'>
                 </div>
             </div>
         </div>
