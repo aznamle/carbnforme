@@ -14,6 +14,7 @@ import {
   Gallery,
   ArticleContent
 } from './'
+import FullImageTextLeft from './FullImageTextLeft'
 
 const SliceZone = ({ sliceZone }) => (
   <div>
@@ -45,6 +46,8 @@ const SliceZone = ({ sliceZone }) => (
           return <Gallery slice={slice} key={`slice-${index}`} />
         case('article_content'):
           return <ArticleContent slice={slice} key={`slice-${index}`} />
+        case('full_image_text_left'):
+          return <FullImageTextLeft slice={slice} key={`slice-${index}`} />
         default:
           return null
       }
