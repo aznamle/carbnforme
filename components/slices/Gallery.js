@@ -1,7 +1,7 @@
 import React from 'react'
 import Section from '../Section'
 
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
+import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox'
 
 const Gallery = ({ slice }) => {
 
