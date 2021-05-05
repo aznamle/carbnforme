@@ -4,14 +4,16 @@ import { SliceZone } from '../components'
 import HeroBanner from '../components/HeroBanner'
 
 
-export default function Home({doc, menu }) {
-
+export default function Home({ doc }) {
+  if(doc && doc.data) {
   return (
-    <div>
-      <HeroBanner banner={doc.data.image}/>
-      <SliceZone sliceZone={doc.data.body} />
-    </div>
-  )
+      <div>
+        <HeroBanner banner={doc.data.image}/>
+        <SliceZone sliceZone={doc.data.body} />
+      </div>
+    )
+  }
+  return null
 }
 
 export async function getStaticProps({ preview = null, previewData = {} }) {
