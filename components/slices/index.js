@@ -12,6 +12,7 @@ export { default as StickyBanner } from './StickyBanner'
 export { default as Gallery } from './Gallery'
 export { default as ArticleContent } from './ArticleContent'
 export { default as FullImageTextLeft } from './FullImageTextLeft'
+export { default as FullImageTextTop } from './FullImageTextTop'
 
 
 export { default as SliceZone } from './SliceZone'

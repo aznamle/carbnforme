@@ -12,9 +12,10 @@ import {
   Specs,
   StickyBanner,
   Gallery,
-  ArticleContent
+  ArticleContent,
+  FullImageTextLeft,
+  FullImageTextTop
 } from './'
-import FullImageTextLeft from './FullImageTextLeft'
 
 const SliceZone = ({ sliceZone }) => (
   <div>
@@ -48,6 +49,8 @@ const SliceZone = ({ sliceZone }) => (
           return <ArticleContent slice={slice} key={`slice-${index}`} />
         case('full_image_text_left'):
           return <FullImageTextLeft slice={slice} key={`slice-${index}`} />
+        case('full_image_text_top'):
+          return <FullImageTextTop slice={slice} key={`slice-${index}`} />
         default:
           return null
       }

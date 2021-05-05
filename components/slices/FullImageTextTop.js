@@ -2,8 +2,7 @@ import React from 'react'
 import { RichText } from 'prismic-reactjs'
 import Section from '../Section'
 
-const FullImageTextLeft = ({ slice }) => {
-    console.log(slice)
+const FullImageTextTop = ({ slice }) => {
     return (
         <div className=" flex w-100 bg-center bg-no-repeat bg-cover"
             style={{
@@ -12,8 +11,8 @@ const FullImageTextLeft = ({ slice }) => {
             }}
         >            
         <div className=''/>
-                <div className='flex lg:max-w-4xl mx-auto items-center justify-center h-full'>
-                <div className='text-center lg:text-left w-3/5'>
+                <div className='flex lg:max-w-3xl mx-auto pt-36 justify-center h-full'>
+                <div className='text-center'>
                     <Section>
                         <p className='text-lg text-white tracking-wider'>
                             {RichText.asText(slice.primary.block_subtitle)}
@@ -30,11 +29,9 @@ const FullImageTextLeft = ({ slice }) => {
                         }
                     </Section>
                 </div>
-                <div className='hidden lg:block w-2/5'>
-                </div>
             </div>
         </div>
     )
 }
 
-export default FullImageTextLeft
+export default FullImageTextTop
