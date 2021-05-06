@@ -17,9 +17,9 @@ export default function HeroBanner({ banner }) {
             className=" z-40 block object-cover object-center h-full w-full md:h-auto"
         />
         }
-            <div class="absolute inset-0 z-20 flex items-end justify-center h-screen mt-20 w-full bg-gray-900 bg-opacity-30">
-                <div className='text-center text-white pb-44'>
-                    <p className='text-2xl'>Welcome</p>
+            <div className="flex absolute inset-0 z-20 items-end justify-center h-screen w-full bg-gray-900 bg-opacity-30 mt-20">
+                <div className='text-center text-white pb-36'>
+                    <p className='text-2xl'>Design & craft </p>
                     <h1 className='text-7xl font-normal'>CARBNFORME is inspired by carbnforme</h1>
                     <div className='flex items-center justify-center pt-8'>
                     <a href='' target="_blank" className="border border-white font-light text-xl text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">

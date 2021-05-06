@@ -24,8 +24,8 @@ function TwoBlockImageRight ({ slice }) {
                     {RichText.asText(slice.primary.blocktitle)}
                 </h3>
                 </Section>
-                {slice.primary.blockdescription.map((text) => (
-                <Section>
+                {slice.primary.blockdescription.map((text, index) => (
+                <Section key={index}>
                     <p className="mt-4 whitespace-pre-line text-lg md:text-base font-light lg:text-xl leading-relaxed text-gray-600">
                         {text.text}
                     </p>
