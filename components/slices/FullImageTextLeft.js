@@ -11,8 +11,8 @@ const FullImageTextLeft = ({ slice }) => {
             }}
         >            
         <div className=''/>
-                <div className='flex lg:max-w-4xl mx-auto items-center justify-center h-full'>
-                <div className='text-center lg:text-left w-3/5'>
+                <div className='flex md:max-w-5xl lg:max-w-screen-xl mx-auto items-center justify-center h-full'>
+                <div className='text-center lg:text-left w-4/5 lg:w-3/5'>
                     <Section>
                         <p className='text-lg text-white tracking-wider'>
                             {RichText.asText(slice.primary.block_subtitle)}
@@ -21,7 +21,7 @@ const FullImageTextLeft = ({ slice }) => {
                         <p className='text-md lg:text-lg text-white'>{RichText.asText(slice.primary.block_description)}</p>
                         {RichText.asText(slice.primary.button_text) !== "" ?
                             <div className='pt-8'>
-                                <a href={slice.primary.button_link.url} target="_blank" className="border-2 border-white rounded-full font-normal text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
+                                <a href={slice.primary.button_link.url} target="_blank" className="border border-white font-normal text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
                                     {RichText.asText(slice.primary.button_text)}
                                 </a>
                             </div>

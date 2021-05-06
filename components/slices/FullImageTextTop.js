@@ -11,7 +11,7 @@ const FullImageTextTop = ({ slice }) => {
             }}
         >            
         <div className=''/>
-                <div className='flex lg:max-w-3xl mx-auto pt-36 justify-center h-full'>
+            <div className='flex lg:max-w-3xl mx-auto items-start pt-16 justify-center h-full'>
                 <div className='text-center'>
                     <Section>
                         <p className='text-lg text-white tracking-wider'>

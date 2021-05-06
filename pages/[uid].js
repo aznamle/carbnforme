@@ -14,7 +14,6 @@ const Page = ({ doc }) => {
     if (doc && doc.data) {
       return (
           <div>
-            <HeroBanner banner={doc.data.image}/>
             <SliceZone sliceZone={doc.data.body} />
           </div>
           

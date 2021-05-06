@@ -11,7 +11,7 @@ const Links = ({ menuLinks }) => {
     const [isExpanded, toggleExpansion] = useState(false)
     const closeMobileMenu = () => toggleExpansion(false)
     return (
-      <nav className="flex items-center justify-between lg:justify-around flex-wrap bg-white p-6 shadow-md">
+      <nav className="flex items-center justify-between lg:justify-around flex-wrap bg-transparent p-6 shadow-md">
         <div className=" flex-shrink-0 text-white mr-6">
           <div className="text-black flex items-center hover:text-gray-200 transition ease-in-out duration-300">
             <a href="/" className='font-semibold text-xl lg:text-2xl md:text-xl' onClick={closeMobileMenu}><strong>C A R B N </strong>F O R M E</a>
@@ -28,7 +28,7 @@ const Links = ({ menuLinks }) => {
 
             {menuLinks.map((menuLink, index) => (
               <li key={`menulink-${index}`} className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-200 mr-4">
-                  <a href={Link.url(menuLink.link)} className="font-light text-md lg:text-xl md:text-l hover:text-gray-200 transition ease-in-out duration-300" onClick={closeMobileMenu}>
+                  <a href={menuLink.link.uid} className="font-light text-md lg:text-xl md:text-l hover:text-gray-200 transition ease-in-out duration-300" onClick={closeMobileMenu}>
                     {RichText.asText(menuLink.label)}
                   </a>
               </li>
@@ -39,6 +39,7 @@ const Links = ({ menuLinks }) => {
       </nav>
     )
   }
+  return null
 }
 
 export default Navbar
