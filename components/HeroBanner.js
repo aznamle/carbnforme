@@ -2,14 +2,13 @@ import React from 'react'
 import { RichText } from 'prismic-reactjs';
 
 export default function HeroBanner({ banner }) {
-
-    const urlEmpty = banner.url
+    const urlEmpty = banner.image.url
 
     return (
         <div>
         { urlEmpty !== undefined ? <div className="flex w-100 h-screen items-center bg-center bg-no-repeat bg-cover z-20"
                 style={{
-                  backgroundImage: `url(${banner.url})`
+                  backgroundImage: `url(${banner.image.url})`
                 }}>
             </div>
             :
@@ -19,13 +18,10 @@ export default function HeroBanner({ banner }) {
         }
             <div className="flex absolute inset-0 z-10 items-end justify-center h-screen w-full bg-gray-900 bg-opacity-30 mt-20">
                 <div className='text-center text-white pb-36'>
-                    <p className='text-2xl'>Design & craft </p>
-                    <h1 className='text-7xl font-light'>CARBNFORME is inspired by carbnforme</h1>
+                    <p className='text-xl md:text-2xl'>{RichText.asText(banner.sub_title)}</p>
+                    <h1 className='text-3xl md:text-6xl font-light'>{RichText.asText(banner.title)}</h1>
                     <div className='flex items-center justify-center pt-8'>
-                    <a href='' target="_blank" className="border border-white font-light text-xl text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
-                        Learn More
-                    </a>
-                    <a href='' target="_blank" className="border border-white font-light text-xl text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
+                    <a href='' target="_blank" className="border border-white font-light md:text-xl text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black">
                         Learn More
                     </a>
                     </div>
