@@ -4,7 +4,13 @@ import { RichText } from 'prismic-reactjs'
 const ArticleHeader = ({title, date, image}) => {
     console.log(date)
     return (
-        <div className=''>
+        <div className='mx-auto '>
+        <div className="flex w-100 bg-center bg-no-repeat bg-cover -mt-16"
+            style={{
+                backgroundImage: `url(${image})`,
+                height: '25vh',
+        }}>
+            </div>
             <h1 className='text-6xl py-2'>
                 {RichText.asText(title)}
             </h1>

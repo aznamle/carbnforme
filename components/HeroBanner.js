@@ -16,7 +16,7 @@ export default function HeroBanner({ banner }) {
             className=" z-40 block object-cover object-center h-full w-full md:h-auto"
         />
         }
-            <div className="flex absolute inset-0 z-10 items-end justify-center h-screen w-full bg-gray-900 bg-opacity-30 mt-20">
+            <div className="flex absolute inset-0 z-10 items-end justify-center h-screen w-full bg-gray-900 bg-opacity-20 mt-20">
                 <div className='text-center text-white pb-36'>
                     <p className='text-xl md:text-2xl'>{RichText.asText(banner.sub_title)}</p>
                     <h1 className='text-3xl md:text-6xl font-light'>{RichText.asText(banner.title)}</h1>

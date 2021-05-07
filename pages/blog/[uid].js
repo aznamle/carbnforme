@@ -5,16 +5,15 @@ import { SliceZone } from '../../components'
 import { queryRepeatableDocuments } from '../../utils/queries'
 import ArticleHeader from '../../components/ArticleHeader'
 
-const Article = ({ doc }) => {
+const Blog = ({ doc }) => {
   if(!doc) return <div>Loading</div>
-  // console.log(doc)
   if (doc && doc.data) {
     return (
-        <div className='container mx-auto items-center justify-center max-w-5xl py-12'>
+        <div className='items-center justify-center max-w-5xl py-12'>
             <ArticleHeader 
-              title={doc.data.article_title} 
-              date={doc.data.article_date} 
-              image={doc.data.header_image} 
+              title={doc.data.blog_title} 
+              date={doc.data.blog_date} 
+              image={doc.data.header_image.url} 
             />
             <SliceZone sliceZone={doc.data.body} />
         </div>
@@ -23,14 +22,14 @@ const Article = ({ doc }) => {
   return null;
 }
 
-export default Article
+export default Blog
 
 
 export async function getStaticProps({ params, preview = null, previewData = {} }) {
   
     const { ref } = previewData
     const client = Client();
-    const doc = await client.getByUID('article', params.uid, ref ? { ref } : null) || {}
+    const doc = await client.getByUID('blog', params.uid, ref ? { ref } : null) || {}
   
     return {
       props: {
@@ -42,9 +41,9 @@ export async function getStaticProps({ params, preview = null, previewData = {} 
   }
 
   export async function getStaticPaths() {
-    const documents = await queryRepeatableDocuments((doc) => doc.type === 'article')
+    const documents = await queryRepeatableDocuments((doc) => doc.type === 'blog')
     return {
-      paths: documents.map(doc => `/article/${doc.uid}`),
+      paths: documents.map(doc => `/blog/${doc.uid}`),
       fallback: true,
     }
   }

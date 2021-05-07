@@ -5,7 +5,7 @@ import Section from '../Section'
 
 const Feature = ({slice}) => {
     return (
-            <div className='content-center items-center bg-black py-12 h-full w-full px-12 font-montserrat'>
+            <div className='content-center items-center bg-black py-12 h-full w-full px-12'>
                         <Section>
 
                 <div className="w-full text-center">

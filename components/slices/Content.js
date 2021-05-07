@@ -5,7 +5,7 @@ import Section from '../Section'
 
 const Content = ({ slice }) => {
     return (
-        <div className="max-w-screen-2xl px-6 md:px-0 py-16 mx-auto font-montserrat">
+        <div className="max-w-screen-2xl px-6 md:px-0 py-16 mx-auto">
             <Section>
             <div className="max-w-md lg:max-w-4xl items-center justify-center md:px-12 py-4 md:py-8 w-100 leading-none tracking-wider">
                 <h1 className="uppercase text-3xl md:text-4xl lg:text-6xl font-bold">{RichText.asText(slice.primary.sectiontitle)}</h1>

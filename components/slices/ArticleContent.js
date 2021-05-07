@@ -4,7 +4,7 @@ import { RichText } from 'prismic-reactjs'
 
 const ArticleContent = ({ slice }) => {
     return (
-        <div className=''>
+        <div className='max-w-5xl'>
             {slice.items.map((content,i) => (
             <div>
                 <img src={content.image.url} />
