@@ -12,21 +12,10 @@ const Links = ({ menuLinks }) => {
   const [isExpanded, toggleExpansion] = useState(false)
   const closeMobileMenu = () => toggleExpansion(false)
 
-  const changeOnScroll = () => {
-    if(window.scrollY >= 80) {
-      setNavbar(true)
-    } else {
-      setNavbar(false)
-    }
-  }
-
-  window.addEventListener('scroll', changeOnScroll)
-
   if(menuLinks) {
 
     return (
-      <nav className={navbar ? 'transition delay-300 ease-out duration-1000 flex items-center justify-between lg:justify-around flex-wrap bg-white p-6 shadow-md top-0 fixed inset-x-0 z-30' 
-        : 'transition delay-300 ease-out duration-1000 flex items-center justify-between lg:justify-around flex-wrap bg-transparent p-6 shadow-md top-0 fixed inset-x-0 z-30'}>
+      <nav className='transition delay-300 ease-out duration-1000 flex items-center justify-between lg:justify-around flex-wrap bg-white p-6 shadow-md top-0 fixed inset-x-0 z-30'>
         
         <div className=" flex-shrink-0 text-black mr-6">
           <div className="text-black flex items-center hover:text-gray-200 transition ease-in-out duration-300">

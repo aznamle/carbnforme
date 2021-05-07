@@ -1,6 +1,5 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
-import Section from '../Section'
 
 const StickyContent = ({ slice }) => {
     console.log(slice)

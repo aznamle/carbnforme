@@ -20,10 +20,10 @@ export default function HeroBanner({ banner }) {
             <div className="flex absolute inset-0 z-10 items-end justify-center h-screen w-full bg-gray-900 bg-opacity-30 mt-20">
                 <div className='text-center text-white pb-36'>
                     <p className='text-2xl'>Design & craft </p>
-                    <h1 className='text-7xl font-normal'>CARBNFORME is inspired by carbnforme</h1>
+                    <h1 className='text-7xl font-light'>CARBNFORME is inspired by carbnforme</h1>
                     <div className='flex items-center justify-center pt-8'>
                     <a href='' target="_blank" className="border border-white font-light text-xl text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
-                        Design and Craft
+                        Learn More
                     </a>
                     <a href='' target="_blank" className="border border-white font-light text-xl text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
                         Learn More

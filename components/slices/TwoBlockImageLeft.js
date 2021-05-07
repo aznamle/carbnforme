@@ -1,6 +1,8 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs';
 
+import Section from '../Section'
+
 function TwoBlockImageLeft ({ slice }) {
     
     const isUrlEmpty = slice.primary.videourl
@@ -17,13 +19,17 @@ function TwoBlockImageLeft ({ slice }) {
 
         <div className="bg-black flex flex-col justify-center items-center lg:w-1/2 shadow-lg">
             <div className="p-10 md:p-36 text-left">
-                <h3 className="text-3xl lg:text-5xl font-semibold text-white">
-                    {RichText.asText(slice.primary.blocktitle)}
-                </h3>
+                <Section>
+                    <h3 className="text-3xl lg:text-5xl font-semibold text-white">
+                        {RichText.asText(slice.primary.blocktitle)}
+                    </h3>
+                </Section>
                 {slice.primary.blockdescription.map((text, i) => (
-                    <p key={i} className="mt-4 whitespace-pre-line text-lg md:text-base font-light lg:text-xl leading-relaxed text-white">
+                <Section key={i}>
+                    <p  className="mt-4 whitespace-pre-line text-lg md:text-base font-light lg:text-xl leading-relaxed text-white">
                         {text.text}       
                     </p>
+                </Section>
                 ))}
 
             </div>
