@@ -7,7 +7,7 @@ export default function HeroBanner({ banner }) {
 
     return (
         <div>
-        { urlEmpty !== undefined ? <div className="flex w-100 h-screen items-center bg-center bg-no-repeat bg-cover z-40"
+        { urlEmpty !== undefined ? <div className="flex w-100 h-screen items-center bg-center bg-no-repeat bg-cover z-20"
                 style={{
                   backgroundImage: `url(${banner.url})`
                 }}>
@@ -17,7 +17,7 @@ export default function HeroBanner({ banner }) {
             className=" z-40 block object-cover object-center h-full w-full md:h-auto"
         />
         }
-            <div className="flex absolute inset-0 z-20 items-end justify-center h-screen w-full bg-gray-900 bg-opacity-30 mt-20">
+            <div className="flex absolute inset-0 z-10 items-end justify-center h-screen w-full bg-gray-900 bg-opacity-30 mt-20">
                 <div className='text-center text-white pb-36'>
                     <p className='text-2xl'>Design & craft </p>
                     <h1 className='text-7xl font-normal'>CARBNFORME is inspired by carbnforme</h1>
