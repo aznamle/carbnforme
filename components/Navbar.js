@@ -27,7 +27,7 @@ const Links = ({ menuLinks }) => {
 
   if(menuLinks) {
     return (
-      <nav className={`transition duration-500 ease-in-out ${ navbar ? `bg-white` : `bg-transparent`} flex items-center justify-between lg:justify-around flex-wrap p-6 shadow-md top-0 fixed inset-x-0 z-30`}>
+      <nav className={`transition duration-500 ease-in-out ${ navbar ? `bg-white` : `bg-transparent`} flex items-center justify-between lg:justify-around flex-wrap p-6 shadow-md top-0 fixed inset-x-0 z-40`}>
         
         <div className=" flex-shrink-0 text-black mr-6">
           <div className={`${ navbar ? `text-black hover:text-gray-200` : `text-white hover:text-gray-600`} flex items-center transition ease-in-out duration-300`}>

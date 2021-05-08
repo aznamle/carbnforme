@@ -2,7 +2,6 @@ import React from 'react'
 import { RichText } from 'prismic-reactjs'
 
 const StickyContent = ({ slice }) => {
-    console.log(slice)
     return (
         <div className='min-h-screen p-5 md:p-10'>
             <div className='max-w-screen mx-auto md:px-10 py-4 md:py-20 gap-y-32'>

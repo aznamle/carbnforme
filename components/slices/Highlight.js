@@ -10,7 +10,7 @@ const Highlight = ({ slice }) => {
             <div className="bg-black py-12 md:py-36 lg:py-44 h-full">
                 <Section>
                 <div className="lg:max-w-screen-2xl mx-auto px-6 sm:px-12 lg:py-6 xl:py-0 relative flex flex-col sm:flex-row bg-black">
-                    <div className="sm:w-1/2 sm:pt-8 lg:pt-0 pb-8 sm:pb-16 lg:pb-36 relative z-20">
+                    <div className="sm:w-1/2 sm:pt-8 lg:pt-0 pb-8 sm:pb-16 lg:pb-36 relative z-30">
                         <h1 className="uppercase font-black text-white leading-none tracking-wider mb-6 mt-4 text-3xl lg:text-6xl xl:text-8xl">
                             {RichText.asText(slice.primary.highlighttitle)}
                         </h1>
