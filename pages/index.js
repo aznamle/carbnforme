@@ -5,7 +5,6 @@ import HeroBanner from '../components/HeroBanner'
 import Posts from '../components/Posts'
 
 export default function Home({ doc, posts }) {
-  console.log(posts)
   if(doc && doc.data) {
   return (
       <div>
