@@ -30,7 +30,6 @@ const FullWidthImage = ({ slice }) => {
         : null 
       }
 
-
       { RichText.asText(slice.items[0].side_title) !== '' ?
       <div className='items-center justify-center mx-auto max-w-4xl py-12 lg:py-24'>
         {slice.items.map((content, i) => (

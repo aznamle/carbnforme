@@ -9,7 +9,7 @@ const Blog = ({ doc }) => {
   if(!doc) return <div>Loading</div>
   if (doc && doc.data) {
     return (
-        <div className='items-center justify-center max-w-5xl py-12'>
+        <div className=''>
             <ArticleHeader 
               title={doc.data.blog_title} 
               date={doc.data.blog_date} 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
+import Image from 'next/image'
 
 import Section from '../Section'
 
@@ -44,7 +45,6 @@ const Content = ({ slice }) => {
                                     : null
                                 }
                             </>
-
                         </div>
                     </Section>
                     ))}
