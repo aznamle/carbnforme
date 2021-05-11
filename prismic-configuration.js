@@ -1,5 +1,6 @@
 import Prismic from '@prismicio/client'
 
+//endpoint
 export const apiEndpoint = 'https://carbnforme.prismic.io/api/v2'
 export const accessToken = ''
 
@@ -18,8 +19,15 @@ const createClientOptions = (req = null, prismicAccessToken = null) => {
 }
 
 export const linkResolver = (doc) => {
-    if (doc.type === 'post') {
-      return `/post/${doc.uid}`;
+    if (doc.type === 'blog') {
+      return `/blog/${doc.uid}`;
     }
     return '/'
   }
+
+export const hrefResolver = (doc) => {
+  if (doc.type === 'blog') {
+    return '/blog/[uid]'
+  }
+  return '/'
+}  
