@@ -10,7 +10,6 @@ const FullImageTextTop = ({ slice }) => {
             height: '100vh'
             }}
         >            
-        <div className=''/>
             <div className='flex lg:max-w-3xl mx-auto items-start pt-16 justify-center h-full'>
                 <div className='text-center'>
                     <Section>
