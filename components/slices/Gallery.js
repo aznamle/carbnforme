@@ -22,7 +22,7 @@ const Gallery = ({ slice }) => {
     return (
         <SimpleReactLightbox>
             <SRLWrapper options={options}>
-                <div className="lg:flex flex-wrap justify-center items-center mx-auto">
+                <div className="lg:flex flex-wrap justify-center items-center mx-auto bg-black">
 
                     {slice.items.map((content, i) => (
 

@@ -14,6 +14,6 @@ export { default as ArticleContent } from './ArticleContent'
 export { default as FullImageTextLeft } from './FullImageTextLeft'
 export { default as FullImageTextTop } from './FullImageTextTop'
 export { default as StickyContent } from './StickyContent'
-
+export { default as CenterImageBlock } from './CenterImageBlock'
 
 export { default as SliceZone } from './SliceZone'

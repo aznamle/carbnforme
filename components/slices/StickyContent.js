@@ -13,9 +13,11 @@ const StickyContent = ({ slice }) => {
                         <h1 className='text-3xl font-light tracking-wide'>
                             {RichText.asText(slice.primary.sticky_title)}
                         </h1>
-                        <p className='pt-2 text-md font-light leading-relaxed'>
-                            {RichText.asText(slice.primary.sticky_description)}
-                        </p>
+                        {slice.primary.sticky_description.map((text, index) => (
+                            <p key={index} className='pt-2 text-md font-light leading-relaxed'>
+                                {text.text}
+                            </p>
+                        ))}
                     </div>
                     <div className='md:w-2/3 space-y-12 md:space-y-24'>
                         {slice.items.map((content, index) => (

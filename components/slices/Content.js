@@ -31,7 +31,7 @@ const Content = ({ slice }) => {
                                     <h1  className="uppercase text-3xl lg:text-3xl font-bold">
                                         {RichText.asText(content.contenttitle)}
                                     </h1>
-                                    <p className="mt-4 whitespace-pre-line text-lg md:text-base lg:text-xl font-medium leading-relaxed text-black">
+                                    <p className="mt-4 whitespace-pre-line text-lg md:text-base lg:text-xl font-light leading-relaxed text-black">
                                         {RichText.asText(content.contentdescription)}
                                     </p>
                                 </div>

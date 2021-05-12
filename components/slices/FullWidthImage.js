@@ -19,11 +19,14 @@ const FullWidthImage = ({ slice }) => {
                 </p>
               <h1 className='text-3xl md:text-4xl text-white tracking-wider py-2'>{RichText.asText(slice.primary.bannertitle)}</h1>
               <p className='text-md lg:text-lg text-white'>{RichText.asText(slice.primary.bannerdescription)}</p>
+            { slice.primary.banner_link.url != null ?
               <div className='pt-8'>
                 <a href={slice.primary.banner_link.url} target="_blank" className="border-2 border-white font-normal text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
                   {RichText.asText(slice.primary.button_text)}
                 </a>
               </div>
+              : null
+            }
             </div>
           </div>
         </div>

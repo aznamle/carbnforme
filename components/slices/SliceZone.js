@@ -15,7 +15,8 @@ import {
   ArticleContent,
   FullImageTextLeft,
   FullImageTextTop,
-  StickyContent
+  StickyContent,
+  CenterImageBlock
 } from './'
 
 const SliceZone = ({ sliceZone }) => (
@@ -54,6 +55,8 @@ const SliceZone = ({ sliceZone }) => (
           return <FullImageTextTop slice={slice} key={`slice-${index}`} />
         case('sticky_content'):
           return <StickyContent slice={slice} key={`slice-${index}`} />
+        case('center_image_block'):
+          return <CenterImageBlock slice={slice} key={`slice-${index}`} />
         default:
           return null
       }
