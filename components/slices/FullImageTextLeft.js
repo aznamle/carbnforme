@@ -3,7 +3,6 @@ import { RichText } from 'prismic-reactjs'
 import Section from '../Section'
 
 const FullImageTextLeft = ({ slice }) => {
-    console.log(slice)
     return (
         <div className=" flex w-100 bg-center bg-no-repeat bg-cover"
             style={{
