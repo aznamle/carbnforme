@@ -3,6 +3,7 @@ import { RichText } from 'prismic-reactjs'
 import Section from '../Section'
 
 const FullImageTextLeft = ({ slice }) => {
+    console.log(slice)
     return (
         <div className=" flex w-100 bg-center bg-no-repeat bg-cover"
             style={{
@@ -21,9 +22,15 @@ const FullImageTextLeft = ({ slice }) => {
                         <p className='text-md lg:text-lg text-white'>{RichText.asText(slice.primary.block_description)}</p>
                         {RichText.asText(slice.primary.button_text) !== "" ?
                             <div className='pt-8'>
-                                <a href={slice.primary.button_link.url} target="_blank" className="border border-white font-normal text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
+                            { slice.primary.button_link.url != null ? 
+                                <a href={slice.primary.button_link.url} className="border border-white font-normal text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
                                     {RichText.asText(slice.primary.button_text)}
                                 </a>
+                                :
+                                <a href={slice.primary.button_link.uid} className="border border-white font-normal text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black mr-6">
+                                    {RichText.asText(slice.primary.button_text)}
+                                </a>
+                            }
                             </div>
                         : null
                         }
