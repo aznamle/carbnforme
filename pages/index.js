@@ -10,7 +10,7 @@ export default function Home({ doc, posts }) {
       <div>
         <HeroBanner banner={doc.data}/>
         <SliceZone sliceZone={doc.data.body} />
-        {/* <Posts posts={posts} /> */}
+        <Posts posts={posts} />
       </div>
     )
   }

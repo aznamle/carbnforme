@@ -16,23 +16,27 @@ const Posts = ({ posts }) => {
 
     // const displayDate = new Intl.DateTimeFormat('en-US', dateFormat).format(Date(posts.data.blog_date))
     return (
-        <div className="relative flex">
+        <div className='lg:flex'>
         {posts.map((post) => (
-            <NextLink
-                  as={linkResolver(post)}
-                  href={hrefResolver(post)}
-                >
-            <a>
-                <div className='inset-0 w-full h-screen'>
-                    <img src={post.data.header_image.url} className='object-cover w-full h-full'/>
-                </div>
-                <div className=''>
-                    <div className='w-full inset-0 relative text-center'>
-                    <h1 className='text-4xl'>{RichText.asText(post.data.blog_title)}</h1>
+             <NextLink
+             as={linkResolver(post)}
+             href={hrefResolver(post)}
+           >           
+        <div className='lg:w-1/3 overflow-hidden'>
+            <div className="lg:flex w-100 bg-center bg-no-repeat bg-cover  block transform duration-500 ease-in-out hover:scale-105"
+            style={{
+            backgroundImage: `url(${post.data.header_image.url})`,
+            height: '75vh'
+            }}
+        >            
+                <div className='flex lg:max-w-3xl items-end p-16 justify-start h-full'>
+                    <div className='text-left'>
+                            <h1 className='text-3xl md:text-4xl font-light text-white tracking-wider py-2'>{RichText.asText(post.data.blog_title)}</h1>
                     </div>
                 </div>
-            </a>
-            </NextLink>
+            </div>
+        </div>
+        </NextLink>
             ))}
         </div>
     )

@@ -13,7 +13,7 @@ export default function HeroBanner({ banner }) {
             </div>
             :
             <video src={RichText.asText(banner.url)} type='video/mp4' autoPlay muted loop playsInline alt="video" 
-            className=" z-40 block object-cover object-center h-full w-full md:h-auto"
+            className=" z-20 block object-cover object-center h-full w-full md:h-auto"
         />
         }
             <div className="flex absolute inset-0 z-10 items-end justify-center h-screen w-full bg-gray-900 bg-opacity-20">
