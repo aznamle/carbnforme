@@ -21,7 +21,7 @@ export default function HeroBanner({ banner }) {
                     <p className='text-xl md:text-2xl'>{RichText.asText(banner.sub_title)}</p>
                     <h1 className='text-3xl md:text-6xl font-light'>{RichText.asText(banner.title)}</h1>
                     <div className='flex items-center justify-center pt-8'>
-                    <a href='' target="_blank" className="border border-white font-light md:text-xl text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black">
+                    <a href='' className="border border-white font-light md:text-xl text-white px-6 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-black">
                         Learn More
                     </a>
                     </div>

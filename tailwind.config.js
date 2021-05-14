@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -7,6 +9,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        gray: colors.gray
+      },
       fontFamily: {
         'montserrat': ['Montserrat']
     }
