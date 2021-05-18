@@ -28,7 +28,7 @@ const FeatureList = ({ slice }) => {
                                     <h1 className="uppercase text-3xl lg:text-3xl font-bold">
                                         {RichText.asText(content.featuretitle)}
                                     </h1>
-                                    <p className="mt-1 whitespace-pre-line text-lg md:text-base lg:text-xl font-normal leading-relaxed text-black">
+                                    <p className="mt-1 whitespace-pre-line text-lg md:text-base lg:text-xl font-light leading-relaxed text-black">
                                         {RichText.asText(content.featuredescription)}
                                     </p>
                                 </Section>
