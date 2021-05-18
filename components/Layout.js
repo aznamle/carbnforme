@@ -4,6 +4,7 @@ import React from 'react'
 import Footer from './Footer'
 
 import Navbar from './Navbar'
+import ScrollToTop from './ScrollToTop'
 
 const Layout = ({ children, menu }) => {
     return (
@@ -17,6 +18,7 @@ const Layout = ({ children, menu }) => {
             <div>
                 {children}
             </div>
+            <ScrollToTop />
             <Footer />
         </div>
     )
