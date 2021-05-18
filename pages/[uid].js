@@ -3,12 +3,22 @@ import { Client } from '../prismic-configuration'
 import { SliceZone } from '../components'
 import { queryRepeatableDocuments } from '../utils/queries'
 
+import Head from 'next/head'
+import { RichText } from 'prismic-reactjs'
+
 
 const Page = ({ doc }) => {
   if(!doc) return <div>Loading</div>
       if (doc && doc.data) {
       return (
           <div>
+            <Head>
+              <title> {RichText.asText(doc.data.meta_title)} </title>
+              <meta 
+                name='description' 
+                content = {RichText.asText(doc.data.meta_description)}
+              />
+            </Head>
             <SliceZone sliceZone={doc.data.body} />
           </div>
           
