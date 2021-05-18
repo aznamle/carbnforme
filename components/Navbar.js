@@ -47,7 +47,7 @@ const Links = ({ menuLinks }) => {
         <div className=" flex-shrink-0 text-black mr-6">
           <div className={`${ navbar ? `text-black hover:text-gray-300` : `text-white hover:text-gray-400`} flex items-center transition ease-in-out duration-300`}>
             <NextLink href='/'>
-            <a className='font-semibold text-xl lg:text-2xl md:text-xl' onClick={closeMobileMenu}><strong>C A R B N </strong>F O R M E</a>
+            <a className='flex space-x-2 font-semibold text-xl lg:text-2xl md:text-xl' onClick={closeMobileMenu}><h1 className='font-bold'>C A R B N </h1><h1 className='font-light'>F O R M E</h1></a>
             </NextLink>
           </div>
         </div>
