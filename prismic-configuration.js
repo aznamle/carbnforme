@@ -19,15 +19,19 @@ const createClientOptions = (req = null, prismicAccessToken = null) => {
 }
 
 export const linkResolver = (doc) => {
-    if (doc.type === 'blog') {
-      return `/blog/${doc.uid}`;
+    if (doc.type === 'page') {
+      return `/${doc.uid}`;
+    } else if (doc.type === 'blog') {
+      return `/blog/${doc.uid}`
     }
     return '/'
   }
 
 export const hrefResolver = (doc) => {
-  if (doc.type === 'blog') {
-    return '/blog/[uid]'
+  if (doc.type === 'page') {
+    return '/[uid]'
+  } else if (doc.type === 'blog') {
+    return `/blog/[uid]`
   }
   return '/'
 }  

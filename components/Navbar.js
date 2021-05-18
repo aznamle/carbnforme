@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'prismic-reactjs'
+import { default as NextLink } from 'next/link'
 import { RichText } from 'prismic-reactjs'
+
+import DocLink from './DocLink'
+
 
 const Navbar = ({ menu = [] }) => (
   <Links menuLinks={menu.data.menu_links} />
@@ -25,13 +28,27 @@ const Links = ({ menuLinks }) => {
   }, [])
 
 
+  const MenuLink = ({ menuLink }) => (
+    <li className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-200 mr-4">
+      <DocLink
+        linkClass={`${ navbar ? `text-black hover:text-gray-300` : `text-white hover:text-gray-400`} font-light text-md lg:text-xl md:text-l transition ease-in-out duration-300`} 
+        link={menuLink.link}
+        onClick={closeMobileMenu}
+        >
+        {RichText.asText(menuLink.label)}
+      </DocLink>
+    </li>
+  )
+
   if(menuLinks) {
     return (
       <nav className={`transition duration-500 ease-in-out ${ navbar ? `bg-white` : `bg-transparent`} flex items-center justify-between lg:justify-around flex-wrap p-6 shadow-md top-0 fixed inset-x-0 z-40`}>
         
         <div className=" flex-shrink-0 text-black mr-6">
           <div className={`${ navbar ? `text-black hover:text-gray-300` : `text-white hover:text-gray-400`} flex items-center transition ease-in-out duration-300`}>
-            <a href="/" className='font-semibold text-xl lg:text-2xl md:text-xl' onClick={closeMobileMenu}><strong>C A R B N </strong>F O R M E</a>
+            <NextLink href='/'>
+            <a className='font-semibold text-xl lg:text-2xl md:text-xl' onClick={closeMobileMenu}><strong>C A R B N </strong>F O R M E</a>
+            </NextLink>
           </div>
         </div>
         <div className="block lg:hidden">
@@ -44,11 +61,10 @@ const Links = ({ menuLinks }) => {
 
 
             {menuLinks.map((menuLink, index) => (
-              <li key={`menulink-${index}`} className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-200 mr-4">
-                  <a href={menuLink.link.uid} className={`${ navbar ? `text-black hover:text-gray-300` : `text-white hover:text-gray-400`} font-light text-md lg:text-xl md:text-l transition ease-in-out duration-300`} onClick={closeMobileMenu}>
-                    {RichText.asText(menuLink.label)}
-                  </a>
-              </li>
+              <MenuLink
+                menuLink={menuLink}
+                key={`menulink-${index}`}
+              />
             ))}
 
           </div>
