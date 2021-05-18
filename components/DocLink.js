@@ -5,7 +5,9 @@ import { Link } from 'prismic-reactjs'
 import { linkResolver, hrefResolver } from '../prismic-configuration'
 
 // Main DocLink component function for generating links to other pages on this site
-const DocLink = ({ children, link, linkClass }) => {
+const DocLink = ({ children, link, linkClass, toggleExpansion }) => {
+  const closeMobileMenu = () => toggleExpansion(false)
+    
   if (link) {
     const linkUrl = Link.url(link, linkResolver)
 
@@ -13,17 +15,17 @@ const DocLink = ({ children, link, linkClass }) => {
     if (link.link_type && link.link_type === 'Document') {
       return (
         <NextLink
-          as={linkUrl}
-          href={Link.url(link, hrefResolver)}
+            as={linkUrl}
+            href={Link.url(link, hrefResolver)}
         >
-          <a className={linkClass}>{children}</a>
+          <a className={linkClass} onClick={closeMobileMenu}>{children}</a>
         </NextLink>
       )
     }
 
     // Otherwise return a normal anchor element
     return (
-      <a className={linkClass} href={linkUrl}>{children}</a>
+      <a className={linkClass} href={linkUrl} onClick={closeMobileMenu}>{children}</a>
     )
   }
   return null

@@ -33,7 +33,7 @@ const Links = ({ menuLinks }) => {
       <DocLink
         linkClass={`${ navbar ? `text-black hover:text-gray-300` : `text-white hover:text-gray-400`} font-light text-md lg:text-xl md:text-l transition ease-in-out duration-300`} 
         link={menuLink.link}
-        onClick={closeMobileMenu}
+        toggleExpansion={toggleExpansion}
         >
         {RichText.asText(menuLink.label)}
       </DocLink>
