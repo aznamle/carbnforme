@@ -10,6 +10,6 @@ async function fetchDocs(page = 1, routes = []) {
 };
 
 export const queryRepeatableDocuments = async (filter) => {
-    const allRoutes = await fetchDocs()
-    return allRoutes.filter(filter)
-  }
+  const allRoutes = await fetchDocs()
+  return allRoutes.filter(filter)
+}
